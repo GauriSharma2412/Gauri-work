@@ -1,0 +1,188 @@
+<!doctypehtml>
+<html>
+<head> <a href=" practice page.html">  
+<img src="images/back button.png"width="40px">
+</a>
+<title>Web Photo Gallery</title></head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+main
+
+@keyframes zoomout
+{
+from{transform:scale(3);}
+to{transform:scale(1);}
+}
+
+/* tag style */
+header
+{
+width:50%;
+background:black;
+color:white;
+margin:auto;
+text-align:center;
+font-size:70px;
+box-shadow:10px 10px 20px cyan;
+padding:20px;
+font-family:arial black;
+text-shadow:5px 5px 5px cyan;
+}
+
+body
+{
+//background:orange;
+background-image:url(images/bg.1.jpg);
+background-size:cover;
+ animation:zoomout 1.50s ease-out;
+}
+
+/* class style */
+.picstyle
+{
+width:17%;
+height:210px;
+border-radius:100px;
+box-shadow:5px 5px 10px cyan;
+margin:70px;
+transition:0.50s;
+}
+
+.picstyle:hover
+{
+transform:scale(1.50)//rotate(360deg);
+border-radius:0px;
+}
+
+/* Extra small device (phones,600px and down)*/
+
+@media only screen and (max-width: 600px)
+
+{
+//body {background:green;}
+
+header
+{
+
+//splay:none;
+
+font-size:10px;
+height:10px;
+padding:5px;
+marin-bottom:10px;
+
+}
+
+main
+
+{
+margin-left:30px;
+}
+.picstyle
+{
+width:80%;height:100%;
+margin:10px;
+}
+}
+
+/*small device (portrait tablets and large phones,600px and up)*/
+@media only screen and (min-width:600px)
+
+{
+//body{background:orange;}
+header
+{
+font-size:20px;
+}
+.picstyle
+{
+width:40%;height:100%;
+margin:10px;
+boder-radius:0px;
+margin-left:40px;
+}
+
+
+/* medium device (landscape tablets, 768px and up)*/
+@media only screen and (min-width:768px)
+{
+//body{background:yellow;}
+}
+
+/* large device (laptops/desktops,992px and up)*/
+@media only screen and (min-width:992px)
+{
+//body{background:cyan;}
+header
+{
+font-size:50px;
+}
+.picstyle
+{
+width:17%;
+height:210px;
+border-radius:100px;
+box-shadow:5px 5px 10px magenta;
+margin:70px;
+transition:0.50s;
+}
+
+}
+
+
+</style>
+
+
+
+
+
+
+
+<body>
+<header> Photo Gallery</header>
+</body>
+<main>
+<a href="img.01.html">
+<img class="picstyle" src="images/img.01.jpg"alt="img.01.jpg image"title= "click to zoom">
+</a>
+
+
+<a href="img.02.html">
+<img class="picstyle" src="images/img.02.jpg"alt="img.02.jpg image"title= "click to zoom">
+</a>
+
+
+<a href="img.03.html">
+<img class="picstyle" src="images/img.03.jpg"alt="img.03.jpg image"title= "click to zoom">
+</a>
+
+<a href="img.04.html">
+<img class="picstyle" src="images/img.04.jpg"alt="img.04.jpg image"title= "click to zoom">
+</a>
+
+<a href="img.05.html">
+<img class="picstyle" src="images/img.05.jpg"alt="img.05.jpg image"title= "click to zoom">
+</a>
+
+<a href="img.06.html">
+<img class="picstyle" src="images/img.06.jpg"alt="img.06.jpg image"title= "click to zoom">
+</a>
+
+<a href="img.07.html">
+<img class="picstyle" src="images/img.07.jpg"alt="img.07.jpg image"title= "click to zoom">
+</a>
+
+
+<a href="img.08.html">
+<img class="picstyle" src="images/img.08.jpg"alt="img.08.jpg image"title= "click to zoom">
+</a>
+
+
+
+
+
+</body>
+</main>
+
+</html>

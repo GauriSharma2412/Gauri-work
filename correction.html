@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #EBE8DB;
+            line-height: 1.6;
+        }
+
+        /* Mobile First Styles (Default) */
+        header {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        #profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #86A788;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px 15px;
+            background: #86A788;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #6f8f70;
+            transform: scale(1.05);
+        }
+
+        /* Container for Desktop Layout */
+        .main-container {
+            display: block;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about p {
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about mark {
+            background: #86A788;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        footer {
+            background: #86A788;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer div {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 5px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            #profile img {
+                width: 120px;
+                height: 120px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav ul li a {
+                display: block;
+                text-align: center;
+            }
+            .about p {
+                text-align: left;
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Desktop View (Min-width: 768px) */
+        @media (min-width: 768px) {
+            header {
+                display: flex;
+                justify-content: flex-end; /* Nav to the right */
+                align-items: center;
+                padding: 15px 50px;
+                border-bottom: 1px solid #86A788; /* Thin line below navbar */
+                text-align: right;
+            }
+
+            header #profile {
+                display: none; /* Hide profile in header for desktop */
+            }
+
+            nav {
+                margin-top: 0;
+            }
+
+            nav ul li a {
+                background: transparent;
+                color: #333;
+                font-weight: bold;
+                padding: 5px 10px;
+            }
+
+            nav ul li a:hover {
+                background: transparent;
+                color: #86A788;
+                transform: none;
+            }
+
+            /* Main section layout change */
+            .main-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 1100px;
+                margin: 60px auto;
+                padding: 0 40px;
+                gap: 50px;
+            }
+
+            /* Desktop Profile on the Left */
+            .desktop-profile {
+                display: block !important;
+                flex: 1;
+                text-align: center;
+            }
+
+            .desktop-profile img {
+                width: 280px; /* Badi profile image */
+                height: 280px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 6px solid #86A788;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            }
+
+            .about {
+                flex: 1.5;
+                text-align: left;
+                margin: 0;
+                padding: 0;
+            }
+
+            .about h2 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
+
+            .about p {
+                text-align: left;
+                margin-left: 0;
+                max-width: 100%;
+            }
+        }
+
+        /* Hide desktop profile on mobile */
+        .desktop-profile {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div id="profile">
+        <img src="images/mee.1.jpeg" alt="Gauri Sharma">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="homework.html">Home</a></li>
+            <li><a href="work page.html">My Work</a></li>
+            <li><a href="practice page.html">Practice Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="main-content">
+    <div class="desktop-profile">
+        <img src="images/mee.1.jpeg" alt="Gauri Sharma">
+    </div>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I'm Gauri Sharma, <mark>a Motion Graphics & UI/UX Designer</mark> who loves turning ideas into engaging visuals.
+        </p>
+        <p>
+            I enjoy creating animations and designs that tell meaningful stories. I believe in
+            <mark>creativity, consistency, and continuous learning</mark>.
+        </p>
+        <p>
+            I specialize in UI/UX, web, and graphic design, crafting user-friendly and visually appealing digital experiences.
+        </p>
+    </section>
+</div>
+
+<footer>
+    <div>
+        <h3>Gauri Sharma</h3>
+    </div>
+    <div>
+        <p>Contact: +91 XXXXXXXX</p>
+        <p>New Delhi, India</p>
+    </div>
+    <div>
+        <ul>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.instagram.com/?hl=en">Instagram</a></li>
+            <li><a href="https://www.youtube.com/">YouTube</a></li>
+            <li><a href="https://in.linkedin.com/">LinkedIn</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

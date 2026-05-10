@@ -1,0 +1,80 @@
+<!doctypehtml>
+<html>
+<head><title>Web Photo Gallery</title></head>
+
+<style>
+
+@keyframes zoomout
+{
+from{transform:scale(3);}
+to{transform:scale(1);}
+}
+
+header
+{
+
+text-align:center;
+font-size:10px;
+}
+
+body
+{
+background-image:url(images/bg.1.jpg);
+background-size:cover;
+ animation:zoomout 1.50s ease-out;
+}
+.picstyle
+{
+width:50%;
+height:450px;
+border-radius:20px;
+//box-shadow:5px 5px 10px cyan;
+margin:400px;
+margin-top:50px;
+text-align:centre;
+transition:0.50s;
+}
+
+.picstyle:hover
+{
+//transform:scale(1.50)rotate(360deg);
+border-radius:0px;
+}
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+<body>
+<header>   
+<a href=" responsiveweb.html">  
+<img src="images/close.png"width="40px">
+
+
+</header>
+</body>
+<main>
+<a href="img.04.html">
+<img class="picstyle" src="images/img.04.jpg"alt="img.04.jpg image"title= "click to zoom">
+</a>
+
+
+
+
+
+
+
+
+
+</main>
+
+</html>
