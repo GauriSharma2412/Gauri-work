@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Registration Form</title>
+</head>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+  }
+
+body
+{
+background-image:url(images/background.jpg);
+background-size:cover;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.container
+{
+ width:420px;
+ background:#fff;
+ padding:30px;
+ border-radius:12px;
+ box-shadow:0 5px 15px rgba(0,0,0,0.2);
+ }
+
+h2
+{
+text-align:center;
+margin-bottom:20px;
+color:#333;
+}
+
+.input-box
+{
+ margin-bottom:15px;
+}
+
+.input-box label
+{
+ display:block;
+ margin-bottom:6px;
+ color:#555;
+ font-size:14px;
+ font-weight:bold;
+ }
+
+.input-box input,
+.input-box select,
+.input-box textarea
+{
+ width:100%;
+padding:10px;
+border:1px solid #ccc;
+border-radius:6px;
+outline:none;
+transition:0.3s;
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus
+{
+ border-color:#6c63ff;
+}
+
+.gender,
+.hobbies
+{
+margin-bottom:15px;
+}
+
+.gender p,
+.hobbies p
+{
+margin-bottom:8px;
+font-weight:bold;
+color:#555;
+}
+
+.gender label,
+.hobbies label
+{
+ margin-right:15px;
+ color:#555;
+ font-size:14px;
+ }
+
+.btn
+{
+width:100%;
+padding:12px;
+border:none;
+background:#6c63ff;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+
+.btn:hover
+{
+background:#574bdb;
+}
+
+.login-link
+{
+ text-align:center;
+ margin-top:15px;
+ font-size:14px;
+ }
+
+.login-link a
+{
+text-decoration:none;
+color:#6c63ff;
+}
+.back-img{
+text-align:center;
+  width:40px;
+  height:40px;
+  cursor:pointer;
+  margin-bottom:10px;
+}
+
+</style>
+
+
+<body>
+<div class="container">
+
+
+<a href=" practice page.html">  
+<img src="images/back button.png"width="40px">
+</a>
+
+<h2>Registration Form</h2>
+<form>
+
+<div class="input-box">
+ <label>First Name</label>
+  <input type="text"placeholder="Enter first name" maxlength="15"
+       required>
+</div>
+
+
+<div class="input-box"><label>Last Name</label><input type="text"placeholder="Enter last name"maxlength="15"required>
+ </div>
+
+ <div class="input-box"><label>Email Address</label><input type="email"placeholder="Enter your email"  required>
+
+
+</div>
+
+<div class="input-box"><label>Phone Number</label> <input type="tel" placeholder="Enter phone number"maxlength="10"required>
+</div>
+
+
+<div class="input-box"><label>Date of Birth</label><input type="date" required></div>
+
+
+<div class="input-box"><label>Password</label><input type="password"placeholder="Enter password"minlength="6"maxlength="12"
+
+required></div>
+
+
+<div class="gender">
+
+<p>Gender</p>
+
+<label>
+<input type="radio" name="gender"> Male
+ </label>
+
+<label>
+<input type="radio" name="gender"> Female
+</label>
+
+<label>
+<input type="radio" name="gender"> Other
+</label>
+
+</div>
+
+
+<div class="hobbies">
+
+<p>Hobbies</p>
+
+<label>
+<input type="checkbox"> Reading
+</label>
+
+<label>
+<input type="checkbox"> Music
+</label>
+
+ <label>
+ <input type="checkbox">Dancing
+ </label>
+
+ <label>
+ <input type="checkbox"> Traveling
+ </label>
+
+ </div>
+
+     
+<div class="input-box">
+<label>Country</label>
+
+<select required>
+<option value="">Select Country</option>
+<option>India</option>
+<option>USA</option>
+<option>Canada</option>
+<option>Australia</option>
+</select>
+</div>
+
+<div class="input-box">
+<label>Address</label>
+<textarea rows="3" placeholder="Enter your address"></textarea>
+</div>
+
+<div class="input-box">
+<label>Upload Profile Photo</label>
+ <input type="file">
+ </div>
+
+ <button type="submit" class="btn">
+  Register
+  </button>
+
+ <div class="login-link">
+  Already have an account?
+  <a href="#">Login</a>
+  </div>
+
+    </form>
+
+  </div>
+
+</body>
+</html>
