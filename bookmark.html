@@ -1,0 +1,181 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark Website</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html{
+      scroll-behavior: smooth;
+    }
+
+    body{
+      background:#fdf6ec;
+      color:#333;
+    }
+
+      header{
+      width:100%;
+      background:#b22222;
+      padding:15px 8%;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:1000;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      color:white;
+      font-size:28px;
+      font-weight:bold;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      margin-left:25px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#ffd700;
+    }
+
+      section{
+      min-height:100vh;
+      padding:120px 10% 50px;
+    }
+
+    h1{
+      font-size:42px;
+      margin-bottom:20px;
+      color:#b22222;
+    }
+
+    p{
+      font-size:18px;
+      line-height:1.8;
+      text-align:justify;
+    }
+
+         background:#fff5e1;
+    }
+
+    #about{
+      background:#ffe4c4;
+    }
+
+    #services{
+      background:#fff0f5;
+    }
+
+    #contact{
+      background:#f0fff0;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+        padding:15px;
+      }
+
+      nav{
+        margin-top:10px;
+      }
+
+      nav a{
+        margin:0 10px;
+        font-size:16px;
+      }
+
+      h1{
+        font-size:32px;
+      }
+
+      p{
+        font-size:16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header>
+    <div class="logo">My Bookmark</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- home-->
+  <section id="home">
+    <h1>Home</h1>
+
+    <p>
+      Welcome to our website. This is the home section of the page.
+      Jab aap header me kisi option par click karoge toh page automatically
+      slide hoke us section par chala jayega. Isko hi bookmark navigation
+      ya one page scrolling website bolte hain.
+      Aap yaha apni details, images, animations aur design add kar sakte ho.
+    </p>
+  </section>
+
+  <!--about -->
+  <section id="about">
+    <h1>About Us</h1>
+
+    <p>
+      Hum ek creative team hain jo modern aur responsive websites banati hai.
+      Is section me aap company ke baare me likh sakte ho.
+      Yaha long paragraph bhi add kar sakte ho.
+      HTML me id use hoti hai aur header ke links us id se connect hote hain.
+      Isi wajah se click karte hi page smoothly scroll hota hai.
+    </p>
+  </section>
+
+  <!-- services-->
+  <section id="services">
+    <h1>Services</h1>
+
+    <p>
+      Hum web designing, animation, graphic designing aur coding services provide karte hain.
+      Aap yaha apne courses, projects aur work details likh sakte ho.
+      Yeh pura design mobile, tablet aur laptop sabme responsive hai.
+    </p>
+  </section>
+
+  <!-- contact -->
+  <section id="contact">
+    <h1>Contact Us</h1>
+
+    <p>
+      Email: example@gmail.com <br><br>
+
+      Phone: +91 9876543210 <br><br>
+
+      Address: GTB Nagar, Delhi
+    </p>
+  </section>
+
+</body>
+</html>
