@@ -1,0 +1,64 @@
+<doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+
+<style>
+body
+{
+background:grey;
+}
+header
+{
+background:teal;
+color:white;
+font-size:40px;
+text-align:center;
+padding:10px;
+box-sizing:border-box;
+font-style:italic;
+font-weight:900px;
+margin-top:-6px;
+
+}
+
+main
+
+{
+height:600px;
+width:80%;
+border-radius:50%;
+overflow:hidden;
+margin:auto;
+margin-top:80px;
+background:linear-gradient(blue,green,yellow,orange,red);
+//background:linear-gradient(to bottom,red,orange,yellow,green,blue);
+//background-image:repeating-linear-gradient(180deg,red,yellow 5%,green 12%);
+height:600px;
+//background-image:radial-gradient(red,yellow,green);height:600px;
+//background-image:radial-gradient(red 10%,yellow 20%,green 30%);height:600px;
+//background-image:repeating-radial-gradient(red, yellow 10%, green 15%);
+//background-image:conic-gradient(blue 25deg,orange,yellow,red,green,cyan);
+background-image:repeating-conic-gradient(blue 0deg 10deg,orange 10deg 20deg,yellow 20deg 30deg,red 30deg 40deg,green 40deg 50deg,cyan 50deg 60deg);
+animation: spinColors 3s linear infinite;  /* ← yahan animation lagao */
+}
+
+@keyframes spinColors {
+from { transform: rotate(0deg); }
+to   { transform: rotate(360deg); }
+}
+
+
+</style>
+<header>
+Using Gradient in HTML
+</header>
+
+<body>
+<main>
+
+</main>
+</body>
+</html>
