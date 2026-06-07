@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  @keyframes ani1
+  {
+    /*
+    from{transform:rotateX(0deg) rotateY(0deg) translate(150px,100px)}
+    to{transform:rotateX(360deg) rotateY(150deg) translate(150px,100px)}
+    */
+
+    from{transform:translate(100px,100px)  rotate3d(0, 0, 0, 45deg);}
+    to{transform:translate(100px,100px) rotate3d(160, 160, -100, 360deg);}
+
+
+
+  }
+  #container
+  {
+  width:400px;
+  height:400px;
+  background:black;
+  margin:auto;
+  display:flex;
+  perspective:1000px;
+  
+  }
+ #box
+ {
+  color:white;
+  background:red;
+  width:150px;
+  height:150px;
+  margin-left:20px;
+ 
+  //background:url(images/p1.jpg);
+  background-size:cover;
+ //backface-visibility:hidden;
+  //transform:translate(10px,10px);
+
+  // transform:translateX(100px);
+ //transform:translateY(-100px);
+
+//transform:translate(100px,100px);
+
+animation:ani1 6s infinite alternate;
+}
+
+ #square
+ {
+  color:white;
+  background:teal;
+  width:150px;
+  height:150px;
+ margin-left:-130px;
+
+
+   //background:url(images/p1.jpg);
+  background-size:cover;
+ //backface-visibility:hidden;
+  //transform:translate(10px,10px);
+
+  //transform:translateX(500px);
+//transform:translateY(-200px);
+
+
+
+animation:ani1 6s infinite alternate;
+}
+
+
+</style>
+<body>
+  <div id="container">
+
+
+    <div id="box">
+     logo
+    </div>
+
+
+    <div id="square">
+      img
+    </div>
+
+
+
+
+  </div>
+  
+</body>
+</html>
