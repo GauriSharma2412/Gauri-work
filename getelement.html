@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    #pic
+    {
+        width:200px;
+        height:200px;
+        box-shadow: 10px 10px 10px grey;
+    }
+
+</style>
+<body>
+    <h1>Get Element In Javascript</h1>
+    <img id="pic" src="images/rabbit.JPG">
+    
+    <h1>About Programing</h1>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, velit commodi nesciunt, necessitatibus aut, assumenda deleniti asperiores minus architecto quasi laudantium fuga cupiditate iste eveniet tempore iusto labore accusantium modi.
+        Quo provident fugit praesentium suscipit maiores sit, esse aperiam quos vitae amet odio, quam itaque libero quae quaerat quasi repudiandae necessitatibus molestias placeat doloremque obcaecati incidunt! Ullam doloribus sed omnis?
+        Consequatur, delectus autem. Officia minima ipsam repudiandae commodi! Aliquid, tempora architecto. Quo doloribus illum expedita, fuga similique consequatur reiciendis non ratione saepe dolorem magni impedit recusandae quae placeat veniam vel.
+        Ad quia, itaque esse eveniet quae perferendis at fugit dolores minus ullam sapiente libero suscipit vel tempore explicabo. Laborum, expedita? Dolorum maiores fuga est possimus at magnam iure, nostrum nulla.
+        Dolore, tempora! Vero, cumque enim excepturi deserunt odio veritatis temporibus debitis sunt dolor saepe mollitia unde aliquam reprehenderit provident, quod suscipit maxime, ad quidem doloremque perspiciatis impedit. Quibusdam, saepe sequi.
+        Asperiores veritatis similique, vitae, eveniet aliquid voluptatem fugit esse laudantium, modi amet atque cupiditate? Molestiae laudantium quia officiis sunt aliquid vero atque, aliquam eveniet libero et pariatur odio officia? Maiores!
+        Ratione deleniti cupiditate quisquam odit consectetur nam facere nesciunt, porro alias hic, recusandae nisi illo molestias eius. Illo, quis reiciendis, pariatur omnis quaerat maxime id corporis doloremque distinctio, amet accusamus?
+        Quod veniam ad nihil ratione aspernatur vel. Repellat blanditiis porro, ea maxime ex corrupti. Ad ipsam velit corporis maiores vel cum iusto dolorum officiis repellendus odit, incidunt, qui provident error.
+        Reiciendis id nemo quos, ipsa dolor consequatur culpa sint, veniam, asperiores deleniti accusantium dicta. Eligendi ullam blanditiis cupiditate nihil quis iste quas sunt vitae, adipisci maiores earum molestiae hic architecto.
+        Suscipit inventore hic labore magni cum iste ipsa voluptas. Voluptatum aut iste, sed porro laboriosam totam corrupti maiores quod eos hic a laborum voluptates aperiam accusantium magni ut labore soluta!
+    </p>
+    <script>
+        var p = document.getElementById("pic")
+        var h = document.getElementsByTagName("h1")
+        h[0].onmouseover = function()
+        {
+          this.style.color="red"  
+          this.style.transition="0.50s"
+          this.style.cursor="320px"
+          this.style.transform="scale(1.50)"
+        }
+
+        h[0].onmouseout = function()
+        {
+            this.style.color="black"
+            this.style.transform="scale(1)"
+            this.style.marginLeft="0px"
+        }
+
+        p.onclick = function()
+        {
+            p.src ="images/penguin.JPG"
+        }
+
+        document.title="ready"
+    </script>
+</body>
+</html>
