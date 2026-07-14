@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Animation</title>
+    <style>
+        <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:pink;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+}
+
+header{
+    width:100%;
+    padding:30px 0;
+}
+
+h1{
+    margin-bottom:25px;
+    color:#333;
+}
+
+/* Banner */
+
+.banner{
+    width:90%;
+    max-width:1300px;
+    height:450px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:5px 10px 20px grey;
+}
+
+.banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.banner{
+    width:95%;
+    height:320px;
+}
+
+h1{
+    font-size:30px;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.banner{
+    width:95%;
+    height:220px;
+}
+
+h1{
+    font-size:24px;
+}
+
+}
+
+</style>
+
+    </style>
+</head>
+<body onload="show()">
+
+    <header>
+        <h1>Creating Banner in Javascript</h1>
+        
+    <img id="pic" src="https://vistasocial.com/wp-content/uploads/2023/04/how-to-send-gifs-on-instagram-1-1024x576.gif">
+    </header>
+
+    <script>
+        // Element ko function ke andar hi target karna safe rehta hai
+        var today = 0;
+
+        function show() {
+            var p1 = document.getElementById("pic");
+
+            if (today < 6) {
+                today++;
+            } else {
+                today = 0;
+            }
+
+            document.title = "Banner: " + today;
+
+            
+            if (today == 1) {
+                p1.src = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3BwYTN0NXhrZ2t4eXF4ZXFlbW00cjNscW00N3pmYW95Z290bndpcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o72F7YT6s0EMFI0za/giphy.gif";
+            }
+            if (today == 2) {
+                p1.src = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmswZ3I4Z2szdzBwam9tcDJ0bW9tcjB6M3BwZzVwZXBnaW9uamR6dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT9IgzoKnwFNmISR8I/giphy.gif";
+            }
+            if (today == 3) {
+                p1.src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ25yMnN2MHM2ajlvdW5nN3FwaGtpNXlxaHJwaWJyeW11bXU5M29ldCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EpqJGmgfBL8Zy/giphy.gif"
+            }
+            if (today == 4) {
+                p1.src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXhvbG5va25sbmh3MDd6cTl0cGxheTNleXVicDlmcXFxcTJ0Zmp6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2Ld1uJ530Bh28/giphy.gif";
+            }
+            if (today == 5) {
+                p1.src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzE1YTl5aHMyYnduZGFwYXFtZDlrYnZjanM0bDE2ank3b29hemVqayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UOdoMz3baCENO/giphy.gif"
+            }
+            if (today == 6) {
+                p1.src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb21laGkyN2E3azYxYW1zZmNncncwbnBrbGt6Njd4cXM1dmtvYnMyeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U0lTosegYKcQKoUQsc/giphy.gif";
+            }
+            if (today == 0) {
+                p1.src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3Ric2xraXYyODZ1aG9ucmEzeXE4dTZmdzY2b21yb3ZmZHpzOXR0ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2qpiSM2USYsaA/giphy.gif";
+            }
+        }
+
+        
+        setInterval(show, 3000);
+    </script>    
+</body>
+</html>
