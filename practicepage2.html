@@ -1,113 +1,191 @@
-<!Doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Practice Work</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Practice Work</title>
 
   <style>
-header img
-{
-margin:auto;
-margin-top:30px;
-}
- body 
-{
- margin: 0;
- font-family: Arial, sans-serif;
- background: #EBE8DB;
 
- text-align: center;     
-}
+    :root {
+      --bg: #F5F4F0;
+      --ink: #1E2A28;
+      --ink-soft: #4A5654;
+      --panel: #FFFFFF;
+      --accent: #3F6E5F;      /* Muted teal-green */
+      --accent-dark: #2C4E43; /* Hover dark teal */
+      --gold: #B08D57;        /* Gold accent */
+      --line: #DAD6CC;
+    }
 
-.container 
-{
- max-width: 600px;
- margin: auto;
- padding: 20px;
- }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-h1 
-{
-font-weight: bold;
-margin-bottom: 30px;
- }
+    body {
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-.card {
- background: #86A788;
- padding: 20px;
- margin-bottom: 20px;
- border-radius: 10px;
- box-shadow: 0 4px 10px rgba(0,0,0,0.1);
- transition: 0.3s;
- }
+    
+    header {
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 24px 20px 0 20px;
+      display: flex;
+      align-items: center;
+    }
 
-.card:hover 
-{
-transform: translateY(-5px);
-background: #6f8f70;
-}
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(30, 42, 40, 0.06);
+      transition: all 0.25s ease;
+    }
+
+    .back-btn:hover {
+      transform: translateX(-3px);
+      background-color: var(--accent);
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(30, 42, 40, 0.15);
+    }
+
+    .back-btn img {
+      width: 20px;
+      height: auto;
+    }
+
+    
+    .container {
+      max-width: 650px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 30px;
+      letter-spacing: 0.05em;
+    }
+
+    
+    .card {
+      background-color: var(--accent);
+      margin-bottom: 20px;
+      border-radius: 14px;
+      border: 1px solid var(--accent);
+      box-shadow: 0 4px 15px rgba(30, 42, 40, 0.08);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background-color: var(--accent-dark);
+      border-color: var(--accent-dark);
+      box-shadow: 0 8px 25px rgba(30, 42, 40, 0.18);
+    }
 
     .card a {
       display: block;
+      padding: 24px 20px;
       text-decoration: none;
-      color: #333;
+      color: #FFFFFF;
       font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 8px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
     }
 
     .card p {
-      color: #666;
+      color: #E7E5DE;
       font-size: 14px;
-      margin: 0;
+      margin-top: 6px;
+      font-weight: 400;
+      letter-spacing: 0;
     }
-
   </style>
 </head>
-<header>   
-<a href=" practiceoption.html">  
-<img src="images/back button.png"width="40px">
-</a>
+<body>
 
-</header>
-
-<main>
   
+  <header>   
+    <a href="practiceoption.html" class="back-btn" title="Go Back">  
+      <img src="images/back button.png" alt="Back">
+    </a>
+  </header>
+
+  
+  <main class="container">
+    <h1>JAVASCRIPT PRACTICE WORK</h1>
+
     <div class="card">
-      <a href="getelement.html">GETELEMENT</a>
-          </div>
+      <a href="getelement.html">
+        GET ELEMENT
+        <p>DOM selection & manipulation using JavaScript</p>
+      </a>
+    </div>
 
- <div class="card">
-      <a href="popup.html">POP-UP IN JAVASCRIPT</a>
-          </div>
+    <div class="card">
+      <a href="popup.html">
+        POP-UP IN JAVASCRIPT
+        <p>Alerts, confirmations & custom popups</p>
+      </a>
+    </div>
 
- <div class="card">
-      <a href="date.html">DATE</a>
-          </div>
+    <div class="card">
+      <a href="date.html">
+        DATE
+        <p>Working with JS Date object & formatting</p>
+      </a>
+    </div>
 
- <div class="card">
-      <a href="createElement.html">CREATING ELEMENT IN JAVASCRIPT</a>
-          </div>
-<div class="card">
-      <a href="banner.html">CREATING BANNER IN JAVASCRIPT</a>
-          </div>
+    <div class="card">
+      <a href="createElement.html">
+        CREATING ELEMENT IN JAVASCRIPT
+        <p>Dynamic HTML element creation & append</p>
+      </a>
+    </div>
 
-<div class="card">
-      <a href="loop.html">TABLE FOR KIDS</a>
-          </div>
-<div class="card">
-      <a href="loopanimation.html">USING ANIMATION IN LOOP</a>
-          </div>
+    <div class="card">
+      <a href="banner.html">
+        CREATING BANNER IN JAVASCRIPT
+        <p>Interactive image & text banner creation</p>
+      </a>
+    </div>
 
+    <div class="card">
+      <a href="loop.html">
+        TABLE FOR KIDS
+        <p>Generating multiplication tables using loops</p>
+      </a>
+    </div>
 
-          </div>
+    <div class="card">
+      <a href="whileloop.html">
+        WHILE LOOP
+        <p>Condition-based iterations with while loops</p>
+      </a>
+    </div>
 
-
-  </div>
-
-</main>
+  </main>
 
 </body>
-
 </html>
