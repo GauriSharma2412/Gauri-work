@@ -3,39 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    body{
-        text-align:center;
-         overflow:hidden;
-         background-image:url(images/kid.jpg) ;
-        font: STIX;
-        margin-top: 4%;
-    }
-   
-        
+    <title>Table For Kids</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     
-</style>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fcf4ec; /* Soft Warm Background */
+            min-height: 100vh;
+            padding-bottom: 15px;
+        }
+        
+        header {
+            width: 100%;
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53); /* Orange Gradient */
+            color: white;
+            padding: 12px;
+            font-size: 26px;
+            font-family: 'Fredoka', cursive;
+            font-weight: bold;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        /* Back Button Wrapper */
+        .back-btn {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .back-btn img {
+            width: 30px;
+            vertical-align: middle;
+        }
+
+        /* Main Container */
+        .container {
+            width: 90%;
+            max-width: 420px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: 600;
+            color: #6C5CE7; /* Purple Accent */
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            border: 2px solid #FF8E53;
+            border-radius: 8px;
+            outline: none;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input:focus {
+            border-color: #FF6B6B;
+            box-shadow: 0 0 6px rgba(255, 107, 107, 0.4);
+        }
+              
+        button {
+            margin-top: 12px;
+            padding: 10px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            background: #6C5CE7;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #5A49E0;
+        }
+
+        #result {
+            margin-top: 15px;
+        }
+
+        #result h2 {
+            color: #6C5CE7;
+            margin-bottom: 10px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 20px;
+        }
+
+        #result p {
+            color: #2D3436;
+            font-size: 16px;
+            margin: 4px 0;
+            font-weight: 600;
+            background: #FFEAA7; /* Light Yellow Highlight */
+            padding: 5px;
+            border-radius: 6px;
+        }  
+
+        /* ====================================
+           MOBILE SPECIFIC OPTIMIZATIONS
+        ==================================== */
+        @media screen and (max-width: 480px) {
+            body {
+                padding-bottom: 10px;
+            }
+
+            header {
+                font-size: 20px;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            .back-btn img {
+                width: 24px;
+            }
+
+            .container {
+                width: 92%;
+                padding: 12px 15px; /* Box size ko mobile par chota kiya */
+            }
+
+            label {
+                font-size: 16px;
+            }
+
+            input {
+                font-size: 15px;
+                padding: 8px;
+                margin-top: 6px;
+            }
+
+            button {
+                font-size: 15px;
+                padding: 8px 20px;
+                margin-top: 8px;
+            }
+
+            #result {
+                margin-top: 10px;
+            }
+
+            #result h2 {
+                font-size: 18px;
+                margin-bottom: 6px;
+            }
+
+            #result p {
+                font-size: 14px; /* Text size chota jisse 1-10 table fit aaye */
+                margin: 3px 0;
+                padding: 4px;
+            }
+        }
+
+        /* Tablet Screens */
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            .container {
+                width: 80%;
+                max-width: 400px;
+            }
+        }
+
+        /* Laptop Screens */
+        @media screen and (min-width: 769px) {
+            button {
+                width: auto;
+            }
+        }
+    </style>
+</head>
 <body>
+
     <header>
-    <a href=" practicepage2.html">  
-<img src="images/back button.png"width="40px">
-</a>
-</header>
+        <a href="practicepage2.html" class="back-btn">  
+            <img src="images/back button.png" alt="Back">
+        </a>
+        Table For Kids
+    </header>
+
+    <div class="container">
+        <label for="num">Enter Table Number</label><br>
+        <input type="number" id="num" placeholder="Enter Number">
+        <br>
+        <button onclick="table()">Show Table</button>
+
+        <div id="result"></div>
+    </div>
+
     <script>
-        var n = prompt("Enter a Number to Create a Table","2")
+        function table() {
+            var n = document.getElementById("num").value;
 
-        document.write("<h1> Table of "+n+"</h1>")
+            if (n === "") {
+                alert("Please Enter a Number");
+                return;
+            }
 
-        for(var i = 1;i<=10;i++)
-    {
+            var data = "<h2>Table of " + n + "</h2>";
 
-        document.write("<h1>"+n+"❌ "+i+"="+n*i+"</h1>")
-    }
+            for (var i = 1; i <= 10; i++) {
+                data += "<p>" + n + " ❌ " + i + " = " + (n * i) + "</p>";
+            }
 
-    document.title ="No Error"
+            document.getElementById("result").innerHTML = data;
+        }
     </script>
     
 </body>
