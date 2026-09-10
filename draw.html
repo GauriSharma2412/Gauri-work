@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>Drwaing in JavaScript</header>
+<style>
+    header{
+        background-color: black;
+        margin-top: 2px;
+        height: 50px;
+        color: aliceblue;
+        text-align: center;
+      font-size: 35px;
+
+      
+    }
+</style>
+<body>
+    <!-- for raster drwaing -->
+     <canvas id="mycan" width="500" height="500" style=""></canvas>
+
+     <script>
+        //vector drawing and raster drawing
+        var mycan = document.getElementById("mycan")
+        var w = window.innerWidth
+        var h = window.innerHeight
+
+        mycan.width= w
+        mycan.height= h
+
+        var c = mycan.getContext("2d");
+        c.fillStyle="brown"
+        c.fillRect(290,380,90,130)
+
+
+       
+
+        c.beginPath();
+        c.arc(300,380,36,0,2 * Math.PI);
+        c.fillStyle="green"
+        c.fill()
+       
+
+
+        c.beginPath();
+        c.arc(365,380,36,0,2 * Math.PI);
+        c.fillStyle="green"
+        c.fill()
+       
+
+
+        c.beginPath();
+        c.arc(330,330,35,0,2 * Math.PI);
+        c.fillStyle="green"
+        c.fill()
+     
+
+
+
+
+     
+     
+
+     </script>
+</body>
+</html>
