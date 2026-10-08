@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Practice Work</title>
+
+  <style>
+
+    :root {
+      --bg: #F5F4F0;
+      --ink: #1E2A28;
+      --ink-soft: #4A5654;
+      --panel: #FFFFFF;
+      --accent: #3F6E5F;      
+      --accent-dark: #2C4E43; 
+      --gold: #B08D57;        
+      --line: #DAD6CC;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    
+    header {
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 24px 20px 0 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(30, 42, 40, 0.06);
+      transition: all 0.25s ease;
+    }
+
+    .back-btn:hover {
+      transform: translateX(-3px);
+      background-color: var(--accent);
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(30, 42, 40, 0.15);
+    }
+
+    .back-btn img {
+      width: 20px;
+      height: auto;
+    }
+
+    
+    .container {
+      max-width: 650px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 30px;
+      letter-spacing: 0.05em;
+    }
+
+    
+    .card {
+      background-color: var(--accent);
+      margin-bottom: 20px;
+      border-radius: 14px;
+      border: 1px solid var(--accent);
+      box-shadow: 0 4px 15px rgba(30, 42, 40, 0.08);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background-color: var(--accent-dark);
+      border-color: var(--accent-dark);
+      box-shadow: 0 8px 25px rgba(30, 42, 40, 0.18);
+    }
+
+    .card a {
+      display: block;
+      padding: 24px 20px;
+      text-decoration: none;
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .card p {
+      color: #E7E5DE;
+      font-size: 14px;
+      margin-top: 6px;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <header>   
+    <a href="practiceoption.html" class="back-btn" title="Go Back">  
+      <img src="images/back button.png" alt="Back">
+    </a>
+  </header>
+
+  
+  <main class="container">
+    <h1>BOOTSTRAP PRACTICE WORK</h1>
+
+    <div class="card">
+      <a href="first.html">
+        BOOTSTRAP
+        <p>work 1</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="grid.html">
+       BOOTSTRAP
+        <p>work 2</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="button.html">
+       BOOTSTRAP
+        <p>work 3</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="bannerstrap.html">
+       BOOTSTRAP
+        <p>work 4</p>
+      </a>
+    </div>
+
+    
+  </main>
+
+</body>
+</html>
